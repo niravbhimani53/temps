@@ -4,7 +4,7 @@ const electron = require('electron')
 const app = electron.app
 const globalShortcut = electron.globalShortcut
 const AutoLaunch = require('auto-launch')
-const menubar = require('menubar')
+const { menubar } = require('menubar')
 const Menu = electron.Menu
 const dialog = electron.dialog
 const ipcMain = electron.ipcMain
@@ -119,7 +119,7 @@ mb.on('show', function show () {
 
 const appPath = app.getPath('exe').split('.app/Content')[0] + '.app'
 
-console.log(appPath)
+console.log('appPath', appPath)
 
 const appLauncher = new AutoLaunch({
   name: 'temps',
